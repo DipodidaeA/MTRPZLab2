@@ -19,7 +19,6 @@ jobs:
 
     - name: Build
       run: 
-          cd Lab2\mainprog
           go build
 
     - name: Run
