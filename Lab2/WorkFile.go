@@ -10,7 +10,7 @@ type ComputeHandler struct {
 	YourPath string
 }
 
-func (ch *ComputeHandler) Compute(input, pkey, wkey string) string {
+func (ch *ComputeHandler) Compute(pkey, wkey string) string {
 	err := ""
 	res := ""
 
@@ -26,7 +26,7 @@ func (ch *ComputeHandler) Compute(input, pkey, wkey string) string {
 					pw := filepath.Join(ch.YourPath, wkey)
 					merr2 := os.WriteFile(pw, []byte(res), 0666)
 					if merr2 != nil {
-						err = "Помилка запису"
+						err = "Помилка запису у файл"
 					}
 				} else {
 					fmt.Println("Відповідь: ", res)
@@ -34,22 +34,7 @@ func (ch *ComputeHandler) Compute(input, pkey, wkey string) string {
 			}
 		}
 	} else {
-		if input != "" {
-			res, err = ChengeText(input)
-			if err == "" {
-				if wkey != "" {
-					pw := filepath.Join(ch.YourPath, wkey)
-					merr2 := os.WriteFile(pw, []byte(res), 0666)
-					if merr2 != nil {
-						err = "Помилка запису"
-					}
-				} else {
-					fmt.Println("Відповідь: ", res)
-				}
-			}
-		} else {
-			err = "Неправильно ведені данні"
-		}
+		err = "Невказано файлу"
 	}
 	return err
 }
