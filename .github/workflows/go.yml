@@ -18,17 +18,13 @@ jobs:
         go-version: '1.22'
 
     - name: Build
-      run: 
-          cd Lab2\mainprog
-          go build
+      run: go build \Lab2\mainprog
 
-    - name: Run
-      run:
-          cd Lab2\mainprog
-          go run Main.go -f Text.md
-          go run Main.go -f -o Text.md Res.html
+    - name: Run1
+      run: go run \Lab2\mainprog\Main.go -f Text.md
+
+    - name: Run2
+      run: go run \Lab2\mainprog\Main.go -f -o Text.md Res.html
 
     - name: Test
-      run: 
-          cd Lab2
-          go test 
+      run: go test \Lab2
