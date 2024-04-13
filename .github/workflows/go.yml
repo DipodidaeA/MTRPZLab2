@@ -17,14 +17,20 @@ jobs:
       with:
         go-version: '1.22'
 
+    - name: CD on mainprog
+      run: cd MTRPZLab2\Lab2\mainprog\
+
     - name: Build
-      run: go build \Lab2\mainprog
+      run: go build
 
     - name: Run1
-      run: go run \Lab2\mainprog\Main.go -f Text.md
+      run: go run Main.go -f Text.md
 
     - name: Run2
-      run: go run \Lab2\mainprog\Main.go -f -o Text.md Res.html
+      run: go run Main.go -f -o Text.md Res.html
 
+    - name: CD on Lab2
+      run: cd MTRPZLab2\Lab2\
+      
     - name: Test
-      run: go test \Lab2
+      run: go test
