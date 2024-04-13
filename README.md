@@ -3,13 +3,14 @@
 Перетворює текст типу markdown у текст типу html. 
 
 Преретворення:
-| Markdown                        | HTML                                    |
-| ----                            | ----                                    |
-| \*\*Text\*\*                    | \<b>Text\</b>                           |
-| \_Text\_                        | \<i>Text\</i>                           |
-| \`Text\`                        | \<tt>Text\</tt>                         |
-| \```T*e_x't\```                 | \<pre>T*e_x't\</pre>                    |
-| Paragraph1.  Paragraph2.        | \<p>Paragraph1.\<p>\<p>Paragraph2.\<p>  |
+| Markdown                                  | HTML                                    |
+| ----                                      | ----                                    |
+| \*\*Text\*\*                              | \<b>Text\</b>                           |
+| \_Text\_                                  | \<i>Text\</i>                           |
+| \`Text\`                                  | \<tt>Text\</tt>                         |
+| \```T*e_x't\```                           | \<pre>T*e_x't\</pre>                    |
+| Par1."пробіл""пробіл"Par2.                | \<p>Paragraph1.\<p>\<p>Paragraph2.\<p>  |
+| Par1."новий рядок""новий рядок"Par2.      | \<p>Paragraph1.\<p>\<p>Paragraph2.\<p>  |
 
 # Як запустити
 
